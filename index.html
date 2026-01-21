@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raya's Profile</title>
+    <!-- Menggunakan Tailwind CSS untuk styling yang modern dan responsif -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Menggunakan Lucide Icons untuk ikon yang cantik -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+        
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        /* Warna seleksi teks kustom */
+        .selection-pink::selection {
+            background-color: #FFD1DC;
+            color: #704242;
+        }
+
+        /* Scrollbar kustom agar senada dengan tema pastel */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FFF5F7;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #FFD1DC;
+            border-radius: 10px;
+        }
+
+        /* Animasi mengapung untuk elemen dekoratif */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .float-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-[#FFF5F7] text-gray-700 selection-pink">
+
+    <!-- Navigasi -->
+    <nav class="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-md border-b border-pink-100">
+        <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-[#FF85A1] tracking-tight">Raya's Profile</h1>
+            <div class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="#beranda" class="hover:text-[#FF85A1] transition-colors">Beranda</a>
+                <a href="#tentang" class="hover:text-[#FF85A1] transition-colors">Tentang</a>
+                <a href="#pendidikan" class="hover:text-[#FF85A1] transition-colors">Pendidikan</a>
+                <a href="#hobi" class="hover:text-[#FF85A1] transition-colors">Hobi</a>
+                <a href="#kontak" class="hover:text-[#FF85A1] transition-colors text-white bg-[#FF85A1] px-4 py-2 rounded-full">Kontak</a>
+            </div>
+            <div class="md:hidden text-[#FF85A1]">
+                <i data-lucide="menu"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Bagian Beranda (Hero) -->
+    <section id="beranda" class="pt-32 pb-20 px-6">
+        <div class="max-w-5xl mx-auto flex flex-col items-center text-center">
+            <div class="relative mb-8 group">
+                <!-- Foto Profil dari Google Drive -->
+                <div class="w-56 h-56 md:w-64 md:h-64 rounded-full border-8 border-[#FFD1DC] overflow-hidden shadow-2xl bg-white transition-transform duration-500 group-hover:scale-105">
+                    <img 
+                        src="https://lh3.googleusercontent.com/d/1U3eJn2kPWOMsHVMUkXWYkM-MsmkRN-k7" 
+                        alt="Foto Raya Acyuta Mahadiarta" 
+                        class="w-full h-full object-cover"
+                        onerror="this.src='https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=400'"
+                    >
+                </div>
+                <!-- Dekorasi Ikon Hati -->
+                <div class="absolute bottom-2 right-4 bg-[#E0BBE4] p-4 rounded-full shadow-lg border-4 border-white float-animation">
+                    <i data-lucide="heart" class="text-white w-6 h-6 fill-current"></i>
+                </div>
+            </div>
+            <h2 class="text-4xl md:text-6xl font-extrabold text-[#FF85A1] mb-4">Hi!, Raya here</h2>
+            <p class="text-xl md:text-2xl text-gray-500 max-w-2xl leading-relaxed">
+                Welcome to my web. Just a simple place to share my stories, experiences, and random thoughts. 
+                Scroll around and have fun, <span class="text-[#FF85A1] font-bold italic underline decoration-wavy">XOXO!</span>
+            </p>
+        </div>
+    </section>
+
+    <!-- Bagian Tentang Saya -->
+    <section id="tentang" class="py-20 px-6 bg-[#E0BBE4]/20">
+        <div class="max-w-4xl mx-auto bg-white p-8 md:p-12 rounded-[2rem] shadow-sm border border-[#E0BBE4]/30 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-[#FFD1DC]/40 rounded-bl-full -mr-10 -mt-10"></div>
+            <h3 class="text-3xl font-bold text-[#9D79B0] mb-6 flex items-center justify-center md:justify-start">
+                <span class="bg-[#E0BBE4] text-white p-2 rounded-lg mr-3">👋</span>
+                Hellow!
+            </h3>
+            <div class="space-y-4 text-center md:text-left">
+                <p class="text-lg leading-relaxed">
+                    Nama aku <span class="font-bold text-[#FF85A1]">Raya Acyuta Mahadiarta</span>, kalian bisa panggil aku <span class="italic text-[#9D79B0]">Raya</span>. 
+                </p>
+                <p class="text-lg leading-relaxed">
+                    Aku lahir di <span class="font-semibold text-indigo-400">Magetan, 17 Juli 2008</span>. Dulu sekolahnya suka pindah-pindah, jadi pengalamannya lumayan seru! 
+                </p>
+                <p class="text-lg leading-relaxed bg-pink-50 p-4 rounded-2xl border-l-4 border-pink-200 inline-block">
+                    Kalau mau tau lebih lanjut tentang sekolah dan hobi aku, bisa lihat di slide-slide berikutnya yaaww! ✨
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bagian Pendidikan -->
+    <section id="pendidikan" class="py-20 px-6">
+        <div class="max-w-5xl mx-auto">
+            <h3 class="text-3xl font-bold text-center mb-12 text-[#B2CEFE]">Jejak Sekolah 🎒</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- SD -->
+                <div class="bg-pink-100 p-8 rounded-3xl transform hover:-translate-y-2 transition-transform duration-300 border border-white/50 shadow-sm">
+                    <div class="bg-white w-12 h-12 rounded-2xl flex items-center justify-center mb-4 shadow-sm text-pink-400">
+                        <i data-lucide="graduation-cap"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold text-gray-800 mb-2">SD</h4>
+                    <ul class="text-gray-600 space-y-2 text-sm">
+                        <li class="flex items-start">
+                            <i data-lucide="map-pin" class="w-4 h-4 mr-2 mt-1 shrink-0"></i> 
+                            <span>SD Badrussalam (Magetan)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="map-pin" class="w-4 h-4 mr-2 mt-1 shrink-0"></i> 
+                            <span>SD Islam (Malang)</span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- SMP -->
+                <div class="bg-purple-100 p-8 rounded-3xl transform hover:-translate-y-2 transition-transform duration-300 border border-white/50 shadow-sm">
+                    <div class="bg-white w-12 h-12 rounded-2xl flex items-center justify-center mb-4 shadow-sm text-purple-400">
+                        <i data-lucide="graduation-cap"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold text-gray-800 mb-2">SMP</h4>
+                    <ul class="text-gray-600 space-y-2 text-sm">
+                        <li class="flex items-start">
+                            <i data-lucide="map-pin" class="w-4 h-4 mr-2 mt-1 shrink-0"></i> 
+                            <span>SMP Permata Jingga (Malang)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="map-pin" class="w-4 h-4 mr-2 mt-1 shrink-0"></i> 
+                            <span>SMP IIS PSM (Magetan)</span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- SMA -->
+                <div class="bg-blue-100 p-8 rounded-3xl transform hover:-translate-y-2 transition-transform duration-300 border border-white/50 shadow-sm">
+                    <div class="bg-white w-12 h-12 rounded-2xl flex items-center justify-center mb-4 shadow-sm text-blue-400">
+                        <i data-lucide="graduation-cap"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold text-gray-800 mb-2">SMA</h4>
+                    <p class="text-gray-600 flex items-center text-sm">
+                        <i data-lucide="map-pin" class="w-4 h-4 mr-2 shrink-0"></i> SMAN 1 Magetan
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bagian Hobi -->
+    <section id="hobi" class="py-20 px-6 bg-[#D0F0C0]/20">
+        <div class="max-w-5xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <h3 class="text-3xl font-bold text-[#7EB57E] mb-6">Hal-Hal Seru! 🎨</h3>
+                    <p class="text-lg mb-8 leading-relaxed">
+                        Hobiku sebenernya ada banyak kayak <span class="font-medium text-[#7EB57E]">memasak, nyanyi, nonton film</span> dan lain-lain...
+                    </p>
+                    <div class="bg-white p-8 rounded-[2.5rem] border-l-8 border-[#7EB57E] shadow-sm transform hover:scale-105 transition-transform">
+                        <p class="text-xl font-bold text-[#7EB57E] mb-2 flex items-center">
+                            <i data-lucide="utensils" class="mr-2"></i> Favorite One:
+                        </p>
+                        <p class="text-2xl font-extrabold text-gray-800 uppercase">Tapi dari itu semua aku paling suka memasak!! 🍳</p>
+                    </div>
+                </div>
+                <!-- Dekorasi Visual Hobi -->
+                <div class="md:w-1/2 grid grid-cols-2 gap-4">
+                    <div class="space-y-4">
+                        <div class="bg-pink-100 aspect-square rounded-3xl flex items-center justify-center">
+                            <i data-lucide="music" class="w-12 h-12 text-pink-400"></i>
+                        </div>
+                        <div class="bg-blue-100 p-8 rounded-3xl text-center font-bold text-blue-500">Singing</div>
+                    </div>
+                    <div class="space-y-4 pt-8">
+                        <div class="bg-[#D0F0C0] p-8 rounded-3xl text-center font-bold text-green-600">Cooking</div>
+                        <div class="bg-purple-100 aspect-square rounded-3xl flex items-center justify-center">
+                            <i data-lucide="film" class="w-12 h-12 text-purple-400"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bagian Kontak -->
+    <section id="kontak" class="py-20 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="bg-[#FFD1DC] p-12 rounded-[3rem] shadow-inner text-white relative overflow-hidden">
+                <!-- Dekorasi Latar Belakang -->
+                <div class="absolute top-0 left-0 w-24 h-24 bg-white/20 rounded-full -ml-10 -mt-10"></div>
+                
+                <h3 class="text-4xl font-bold mb-6">Let's be friends! ✨</h3>
+                <p class="text-lg mb-10 opacity-90 leading-relaxed max-w-xl mx-auto">
+                    Feel free to reach out, you can contact me anytime for collaboration, 
+                    discussion or just a simple greetings!
+                </p>
+                <div class="flex flex-col md:flex-row justify-center gap-6">
+                    <!-- Tombol Email -->
+                    <a 
+                        href="mailto:hello@rayamahadiarta.com" 
+                        class="bg-white text-[#FF85A1] px-8 py-4 rounded-full font-bold flex items-center justify-center hover:shadow-xl hover:-translate-y-1 transition-all"
+                    >
+                        <i data-lucide="mail" class="mr-2"></i> Email Me
+                    </a>
+                    <!-- Tombol Instagram -->
+                    <a 
+                        href="https://instagram.com/rayamahadiarta" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        class="bg-[#FF85A1] border-2 border-white px-8 py-4 rounded-full font-bold flex items-center justify-center hover:bg-white hover:text-[#FF85A1] hover:-translate-y-1 transition-all"
+                    >
+                        <i data-lucide="instagram" class="mr-2"></i> @rayamahadiarta
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-10 text-center border-t border-pink-50">
+        <p class="text-pink-300 font-medium italic">Made with 💖 by Raya's Profile &copy; 2024</p>
+    </footer>
+
+    <!-- Inisialisasi Ikon Lucide -->
+    <script>
+      lucide.createIcons();
+    </script>
+</body>
+</html>
